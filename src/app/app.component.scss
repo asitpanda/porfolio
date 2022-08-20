@@ -1,0 +1,19 @@
+.to-top {
+  bottom: 0;
+  cursor: pointer;
+  margin: 0 8px 12px 0;
+  position: fixed;
+  right: 0;
+  opacity: 0;
+  padding: 15px 10px;
+  border-radius: 20%;
+  font-size: 30px;
+  background: var(--secondary-color);
+  color: var(--white-color);
+  &:hover{
+    background: var(--brown-color);
+  }
+}
+.show-scrollTop {
+  opacity: 1;
+}

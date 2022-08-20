@@ -1,0 +1,45 @@
+<div class="app__works">
+  <h2 class="head-text">My Creative <span>Portfolio</span> Section</h2>
+
+  <div class="app__work-filter">
+    <div
+      *ngFor="let item of workList"
+      (click)="activeFilter = item"
+      class="app__work-filter-item p-text"
+      [ngClass]="activeFilter === item ? 'item-active' : ''"
+    >
+      {{ item }}
+    </div>
+  </div>
+
+  <div  class="app__work-portfolio">
+    <div class="app__work-item app__flex" *ngFor="let work of filterWorkList(workDetails)">
+      <div class="app__work-img app__flex">
+        <img src="{{ work.imageUrl }}" alt="{{ work.title }}" />
+
+        <div class="app__work-hover app__flex">
+          <a href="{{ work.projectLink }}" target="_blank" rel="noreferrer">
+            <div class="action-ele app__flex">
+              <i class="fa-solid fa-eye"></i>
+            </div>
+          </a>
+          <a href="{{ work.codeLink }}" target="_blank" rel="noreferrer">
+            <div class="action-ele app__flex">
+              <i class="fa-brands fa-github"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="app__work-content app__flex">
+        <h4 class="bold-text">{{work.title}}</h4>
+        <p class="p-text" style="margin-top: 10px">{{work.description}}</p>
+
+        <div class="app__work-tag app__flex">
+          <p class="p-text">{{work.tags[0]}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+>

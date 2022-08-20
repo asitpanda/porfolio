@@ -1,0 +1,47 @@
+<!-- <div class="app__about">
+  <h2 class="head-text">
+    I Know that <span>Good Design</span> <br />means <span>Good Business</span>
+  </h2>
+
+  <div class="app__profiles">
+    <div
+      *ngFor="let item of aboutMe"
+      class="app__profile-item"
+    >
+      <img src="{{item.imageUrl}}" alt="item.name" />
+      <h2 class="bold-text" style="margin-top: 20px">{{item.name}}</h2>
+      <p class="p-text" style="margin-top: 10px">{{item.description}}</p>
+    </div>
+  </div>
+</div> -->
+
+<div class="app__about">
+  <h2 class="head-text">What I do</h2>
+  <h4>CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK</h4>
+  <div class="about_detail">
+    <div class="techstack-img">
+      <img src="./assets/image.png" alt="about">
+    </div>
+    <div class="language-desc">
+      <div class="language-list">
+        <div class="language-item" *ngFor="let language of languageList">
+          <span class="svg-icon" *ngIf="language.isSvg" >
+            <i class="{{ language.iconClass }}"></i>
+          </span>
+          <span class="font-icon" *ngIf="!language.isSvg" >
+            <i class="fa-brands {{ language.iconClass }}"></i>
+          </span>
+          <span class="name">{{ language.name }}</span>
+        </div>
+      </div>
+      <div class="description-list">
+        <div class="description-item" *ngFor="let desc of descriptions">
+          <i class="fa-solid fa-hand-point-right"></i>
+          <p>{{desc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+</div>

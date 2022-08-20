@@ -1,0 +1,15 @@
+<div class="skills">
+  <h2 class="head-text">Experiences</h2>
+
+  <div class="skills-exp">
+    <div *ngFor="let experience of expDetails" class="skills-exp-item">
+      <p class="company">{{ experience.company }}</p>
+      <h4 class="bold-text">{{ experience.name }}</h4>
+      <p class="date">
+        <i class="fa-solid fa-calendar-days"></i>
+        {{ experience.year }}
+      </p>
+      <span class="p-text">{{ experience.desc }}</span>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,26 @@
+<div class="app-home app__flex">
+  <div class="app-home-badge">
+    <div class="badge-cmp app__flex">
+      <span>👋</span>
+      <div style="margin-left: 20px">
+        <p>Hello, I am</p>
+        <h1>Asit Panda</h1>
+      </div>
+    </div>
+    <div class="tag-cmp app__flex">
+      <p>
+        A passionate Frontend Software Developer having an experience of
+        building Web and Mobile applications with JavaScript / Reactjs / Angular
+        and some other cool libraries and frameworks.
+      </p>
+    </div>
+    <div class="connect-items">
+      <div class="connect-item" *ngFor="let item of connectList">
+        <i class="{{item.class}} {{item.icon}}"></i>
+      </div>
+    </div>
+  </div>
+  <div class="app-home-img">
+    <img src="./assets/16997.jpg" alt="profile_bg" />
+  </div>
+</div>
